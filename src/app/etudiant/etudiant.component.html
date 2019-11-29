@@ -1,0 +1,19 @@
+<div class="card highlight-card card-small" *ngIf="id==-1 && conne.access">
+  <span>Etudiants</span>
+</div>
+<div *ngIf="id==-1 && conne.access">
+  <table>
+      <tr>
+        <th>Nom</th>
+        <th>Prénom</th>
+        <th>Promotion</th>
+        <th>Option</th>
+      </tr>
+    <tr *ngFor="let e of etudiants.etudiants; let i=index">
+      <td>{{e.nom}}</td>
+      <td>{{e.prenom}}</td>
+      <td>{{e.promo}}</td>
+      <td>{{e.option}}</td>
+    </tr>
+  </table>
+</div>

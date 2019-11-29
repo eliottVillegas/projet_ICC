@@ -1,0 +1,11 @@
+<section>
+  <form #formEdition="ngForm" (submit)="edition()">
+
+       <label>J'accepte de partager mes données personnelles:
+          <input type="checkbox" ng-model="data_allowed">
+        </label>
+      <input name="envoie" type="submit" [disabled]="formEdition.control.invalid" value="Envoyer" />
+      <input name="annuler" type="reset" />
+      
+  </form>
+</section>

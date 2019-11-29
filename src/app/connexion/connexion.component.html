@@ -1,0 +1,14 @@
+<section>
+  <form #fi="ngForm" (submit)="authentification()" *ngIf="!conne.connecte">
+
+      <input name="id" [(ngModel)]="identification.id" type="text" placeholder="Identifiant" >
+
+      <input name="pwd" [(ngModel)]="identification.pwd" type="password" placeholder="Mot de passe" >
+
+      <input name="envoie" type="submit" [disabled]="fi.control.invalid" value="Envoyer">
+      <input name="annuler" type="reset" >
+  </form>
+  <div *ngIf="validate">
+      <p style="color: red;">Connexion refusée. Veuillez vérifier votre pseudo et votre mot de passe.</p>
+  </div>
+</section>

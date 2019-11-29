@@ -1,0 +1,28 @@
+<section>
+    <form #fi="ngForm" (submit)="inscription()">
+
+        <input name="id" [(ngModel)]="newUser.id" type="text" placeholder="Identifiant" required>
+        <br/>
+        <input name="pwd" [(ngModel)]="newUser.pwd" type="password" placeholder="Mot de passe" required>
+        <br/>
+        <input name="nom" [(ngModel)]="newUser.nom" type="text" placeholder="Nom">
+        <br/>
+        <input name="prenom" [(ngModel)]="newUser.prenom" type="text" placeholder="Prenom">
+        <br/>
+        <input name="option" [(ngModel)]="newUser.option" type="text" placeholder="Option">
+        <br/>
+        <input name="promotion" [(ngModel)]="newUser.promotion" type="text" placeholder="Promotion">
+        <br/>
+        <label>J'accepte de partager mes données personnelles:
+            <input type="checkbox" ng-model="newUser.data_allowed" ng-true-value="1" ng-false-value="0">
+        </label>
+        <a href routerLink="/rgpd">RGPD</a>
+        <br/>
+        <input name="envoie" type="submit" [disabled]="fi.control.invalid" value="Envoyer">
+        <br/>
+        <input name="annuler" type="reset">
+    </form>
+    <div *ngIf="erreur">
+        <p style="color: red;">Veuillez saisir un autre pseudo. Celui-ci est déjà pris.</p>
+    </div>
+</section>

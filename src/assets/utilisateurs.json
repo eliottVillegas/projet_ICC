@@ -1,0 +1,6 @@
+[
+    {"id":"admin","pwd":"admin","nom":"admin","prenom":"admin","statut":true,"promo":"","option":"","data_allowed":1},
+    {"id":"test1","pwd":"test1","nom":"test1","prenom":"test1","statut":false,"promo":"2021","option":"IA","data_allowed":0},
+    {"id":"test2","pwd":"test2","nom":"test2","prenom":"test2","statut":false,"promo":"2022","option":"ICC","data_allowed":1},
+    {"id":"test3","pwd":"test3","nom":"test3","prenom":"test3","statut":false,"promo":"2023","option":"IA","data_allowed":1}
+]

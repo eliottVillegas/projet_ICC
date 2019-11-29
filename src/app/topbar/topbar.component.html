@@ -1,0 +1,14 @@
+<div class="toolbar" role="banner">
+    <img
+      width="50"
+      alt="EISTI Logo"
+      [src]="image"
+    />
+    <a href routerLink="/">Bienvenue</a>
+    <a href routerLink="/etudiant" *ngIf="conne.connecte && conne.access">Etudiants</a>
+    <a href routerLink="/statistiques" *ngIf="conne.connecte && conne.access">Statistiques</a>
+    <a href routerLink="/edition" *ngIf="conne.connecte">Edition</a>
+    <a href routerLink="/connexion" *ngIf="!conne.connecte">Connexion</a>
+    <a href routerLink="/inscription" *ngIf="!conne.connecte">Inscription</a>
+    <a class="deco" href routerLink="/" (click)="!conne.connecte = false;" *ngIf="conne.connecte">Déconnexion</a>
+  </div>
